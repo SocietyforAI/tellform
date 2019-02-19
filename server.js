@@ -64,7 +64,7 @@ require('./config/passport')();
 
 // Start the app by listening on <port>
 // app.listen(config.port);
-app.listen(process.env.PORT || config.port)
+app.listen(process.env.PORT)
 
 // Expose app
 exports = module.exports = app;
