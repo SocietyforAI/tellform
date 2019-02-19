@@ -22,7 +22,7 @@ module.exports = {
 		password: process.env.ADMIN_PASSWORD || 'root',
 	},
 	
-	redisUrl: process.env.REDIS_URL || 'redis://127.0.0.1:6379',
+	redisUrl: process.env.REDIS_URL || 'redis://societyforai-membership-form.herokuapp.com:6379',
 
 	port: process.env.PORT || 3000,
 	socketPort: process.env.SOCKET_PORT || 20523,
@@ -31,12 +31,12 @@ module.exports = {
 	templateEngine: 'pug',
 
  	signupDisabled: (process.env.SIGNUP_DISABLED === 'TRUE'),
-	enableClusterMode: (process.env.ENABLE_CLUSTER_MODE === 'TRUE'),
-	baseUrl: process.env.BASE_URL || 'localhost:3000',
+	enableClusterMode: (process.env.ENABLE_CLUSTER_MODE === 'FALSE'),
+	baseUrl: process.env.BASE_URL || 'https://societyforai-membership-form.herokuapp.com:3000',
 	tempUserCollection: 'temporary_users',
 
 	mailer: {
-		from: process.env.MAILER_FROM || 'testing@'+process.env.SPARKPOST_SANDBOX_DOMAIN || 'no-reply@tellform.com',
+		from: process.env.MAILER_FROM || 'testing@'+process.env.SPARKPOST_SANDBOX_DOMAIN || 'societyforai@outlook.com',
 		options: process.env.MAILER_SMTP_HOST ? { //Uses custom SMTP if MAILER_SMTP_HOST is set
 			host: process.env.MAILER_SMTP_HOST || '',
 			port: process.env.MAILER_SMTP_PORT || 465,
