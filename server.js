@@ -63,7 +63,8 @@ if (process.env.CREATE_ADMIN_ACCOUNT === 'TRUE') {
 require('./config/passport')();
 
 // Start the app by listening on <port>
-app.listen(config.port);
+// app.listen(config.port);
+app.listen(process.env.PORT || 3000)
 
 // Expose app
 exports = module.exports = app;
